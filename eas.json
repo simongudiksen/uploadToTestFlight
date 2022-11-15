@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 2.4.1"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": { "simulator": true }
+    },
+    "production": {
+      "android": {
+        "cache": { "key": "35435345" },
+
+        "image": "latest",
+
+        "autoIncrement": true
+      },
+
+      "ios": {
+        "cache": { "key": "34543543" },
+
+        "autoIncrement": true
+      },
+
+      "channel": "production"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
