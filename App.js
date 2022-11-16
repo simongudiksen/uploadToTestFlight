@@ -8,19 +8,21 @@ import { Provider as AuthProvider } from "./scr/context/AuthContext";
 import { Provider as LessonProvider } from "./scr/context/LessonContext";
 import { Provider as LiveSessionProvider } from "./scr/context/LiveSessionContext";
 
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
 const Stack = createStackNavigator();
 
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Group>
-          <Stack.Screen
-            name="ChooseAvatar"
-            component={ChooseAvatarScreen}
-            options={{ headerShown: false }}
-          />
-        </Stack.Group>
+        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
